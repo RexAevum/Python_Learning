@@ -36,7 +36,7 @@ mean = gradeSum / gradeCount2
 # List vs dictionary 
 exampleList = [1, 2, 3] # this is a list -> square brackets and each value is sepperated with comma
 
-exampleDictionary = {"Nr 1: " : 9.1, "Nr 2: " : 6.9, "Nr 3: " : 2.1}
+exampleDictionary = {"Jeff" : 9.1, "Kyle" : 6.9, "Chig" : 2.1}
 #print(exampleDictionary, '\n')
 
 # Tuple in dictionary 
@@ -59,5 +59,24 @@ listToMod[3:]
 
 # Negative indexes on a list of strings
 wordList = ['hello', 'bye', 'stay']
+temp = wordList[0][2] # the first square will get the 0 index item and the second square will get the letter at index 2 
+#print(temp) 
 
-print(wordList[0][2]) # the first square will get the 0 index item and the second square will get the letter at index 2 
+# Dictionaries use keys in the square brakets
+temp = exampleDictionary["Jeff"]
+print(temp) 
+
+# coverting between data structures
+# From tuple to list
+
+data = (1, 2, 3)
+list(data)
+
+# From list to tuple
+
+data = [4, 5, 6]
+tuple(data)
+
+# From list to dictionary
+data = [["name", "Jhon"], ["surname", "Smith"]] # its a list of lists, each internal list contains 2 variables - the key and the value
+dict(data)
