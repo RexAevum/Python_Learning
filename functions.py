@@ -31,3 +31,33 @@ def func1 (x):
     return itemToReturn
 
 print(func1(0))
+
+# ----------------------------------------------------------------------------------------------------------
+
+# Functions with multiple arguments and no default values
+def newFunc (name, lastName): # arguments are seperated by a comma
+    return name + ' ' + lastName
+
+# Functions with multiple arguments and default values - the default value has to be after the non default or error
+def newFuncDef (name, lastName = 'Smith'): # arguments are seperated by a comma
+    return name + ' ' + lastName
+# to call the function you can use keyword and non-keywoard arguments
+#keywoard arguments - position of arguments do not matter
+x = newFunc(lastName = 'adsf', name = 'assd')
+
+# non-keyword - based on order
+x = newFunc('1', '2')
+
+# funtions with infinite* areguments - does not have a set number of variables
+# need to use the '*args' in the argument for function definition -> generates a tuple of arguments
+def mult(*args):
+    return sorted([x.upper() for x in args])
+        
+
+# Key word arguments only
+def meanKwargs (**kwargs): # to force keyword args you need to use '**' before the kwargs (can change)
+    return kwargs
+
+# if method needs kwargs then all passed arguments need to be with keywords -> creates a dictionary that hold the key and value
+test = meanKwargs(a = 1, b = 2, c = 3)
+# if you don't give the arguments it will result in error
