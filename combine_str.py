@@ -8,7 +8,7 @@ def addStr(resultStr):
     newStr = resultStr
     while True:
         tempStr = input("Say something: ")
-        if tempStr == "\end":
+        if tempStr == r"\end":
             break
         else:
             newStr = newStr + tempStr.title() + ' '
@@ -24,7 +24,7 @@ def makeNewStr ():
     questions = ('how', 'why', 'what', 'if', 'where') #Has to be a tuple (cannot be changed)
     while True:
         userIn = input("Say something: ")
-        if userIn == '\end':
+        if userIn == r'\end':
             return newStr
         else:
             # To check if str ends with a stop
@@ -36,7 +36,7 @@ def makeNewStr ():
                 userIn = userIn[:-1] + '.'
             newStr = newStr + userIn.title() + " " 
 
-#print(makeNewStr())
+print(makeNewStr())
 
 # Given solution
 # Func to format the senctence 
@@ -52,10 +52,10 @@ def sentence_maker(phrase):
 results = []
 while True:
     userIn = input('Say something: ')
-    if userIn == '\end':
+    if userIn == r'\end':
         break
     else:
         results.append(sentence_maker(userIn))
 
 # ' '.join(list) - will join the str with the defined char inbetween
-print(' '.join(results))
+#print(' '.join(results))
