@@ -8,7 +8,7 @@ def addStr(resultStr):
     newStr = resultStr
     while True:
         tempStr = input("Say something: ")
-        if tempStr == '\end':
+        if tempStr == "\end":
             break
         else:
             newStr = newStr + tempStr.title() + ' '
